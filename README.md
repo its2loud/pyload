@@ -1,12 +1,12 @@
 Modified 
 ===========
 
-![Screenshot](screen.png)
-
 - new web interface template
 - Click'n Load Fix
 - Workaround for oss-js problem
 - Telegram Bot Plugin
+
+![Screenshot](screen.png)
 
 Description
 ===========
