@@ -3,7 +3,7 @@ Modified
 
 ![Screenshot](screen.png)
 
-- new web interfaceNtemplate
+- new web interface template
 - Click'n Load Fix
 - Workaround for oss-js problem
 - Telegram Bot Plugin
