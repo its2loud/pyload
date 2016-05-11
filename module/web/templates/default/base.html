@@ -36,20 +36,20 @@
 
 {% if update %}
 <span>
-<span style="font-weight: bold; margin: 0 2px 0 2px;">{{_("pyLoad Update available!")}}</span>
+<span style="font-weight: 300; margin: 0 2px 0 2px;">{{_("pyLoad Update available!")}}</span>
 </span>
 {% endif %}
 
 
 {% if plugins %}
 <span>
-<span style="font-weight: bold; margin: 0 2px 0 2px;">{{_("Plugins updated, please restart!")}}</span>
+<span style="font-weight: 300; margin: 0 2px 0 2px;">{{_("Plugins updated, please restart!")}}</span>
 </span>
 {% endif %}
 
 <span id="cap_info" style="display: {% if captcha %}inline{%else%}none{% endif %}">
 <img src="/media/default/img/images.png" alt="Captcha:" style="vertical-align:middle; margin:2px" />
-<span style="font-weight: bold; cursor: pointer; margin-right: 2px;">{{_("Captcha waiting")}}</span>
+<span style="font-weight: 300; cursor: pointer; margin-right: 2px;">{{_("Captcha waiting")}}</span>
 </span>
 
     <img src="/media/default/img/head-login.png" alt="User:" style="vertical-align:middle; margin:2px" /><span style="padding-right: 2px;">{{user.name}}</span>
@@ -120,8 +120,7 @@
 
 {% if perms.LIST %}
 <ul id="page-actions">
-    <li><span class="time">{{_("Download:")}}</span><a id="time" style=" background-color: {% if status.download %}#8ffc25{% else %} #fc6e26{% endif %}; padding-left: 0cm; padding-right: 0.1cm; "> {% if status.download %}{{_("on")}}{% else %}{{_("off")}}{% endif %}</a></li>
-    <li><span class="reconnect">{{_("Reconnect:")}}</span><a id="reconnect" style=" background-color: {% if status.reconnect %}#8ffc25{% else %} #fc6e26{% endif %}; padding-left: 0cm; padding-right: 0.1cm; "> {% if status.reconnect %}{{_("on")}}{% else %}{{_("off")}}{% endif %}</a></li>
+    <li><span class="time">{{_("Download:")}}</span><a id="time" data-status= {% if status.download %}"on"{% else %}"off"{% endif %} style="padding-left: 0cm; padding-right: 0.1cm;"> {% if status.download %}{{_("on")}}{% else %}{{_("off")}}{% endif %}</a></li>
     <li><a class="action backlink">{{_("Speed:")}} <b id="speed">{{ status.speed }}</b></a></li>
     <li><a class="action cog">{{_("Active:")}} <b id="aktiv" title="{{_("Active")}}">{{ status.active }}</b> / <b id="aktiv_from" title="{{_("Queued")}}">{{ status.queue }}</b> / <b id="aktiv_total" title="{{_("Total")}}">{{ status.total }}</b></a></li>
     <li><a href=""  class="action revisions" accesskey="o" rel="nofollow">{{_("Reload page")}}</a></li>
